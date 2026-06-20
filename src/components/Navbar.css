@@ -98,10 +98,16 @@
   width: 100%;
 }
 
-.nav-cta {
-  padding: 10px 22px;
+.navbar-links .nav-cta {
+  padding: 10px 24px !important;
   font-size: 0.85rem;
+  white-space: nowrap;
 }
+
+.navbar-links a.nav-cta::after {
+  display: none;
+}
+
 
 .mobile-menu-btn {
   display: none;

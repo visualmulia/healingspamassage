@@ -129,7 +129,9 @@ a {
   transition: var(--transition-normal);
   letter-spacing: 0.5px;
   gap: 8px;
+  white-space: nowrap;
 }
+
 
 .btn-primary {
   background-color: var(--primary);
