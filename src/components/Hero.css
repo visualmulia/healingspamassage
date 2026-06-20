@@ -1,0 +1,146 @@
+/* Hero Component Styling */
+
+.hero-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 650px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.hero-subtitle {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-title span {
+  color: var(--accent);
+  font-family: var(--font-title);
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Floating Trust Badges */
+.hero-badges {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  padding: 24px 32px;
+  border-radius: var(--radius-md);
+  margin-top: 20px;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.badge-icon {
+  font-size: 1.8rem;
+}
+
+.badge-text h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.badge-text p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.badge-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(197, 168, 128, 0.25);
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .hero-badges {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+  
+  .badge-divider {
+    display: none;
+  }
+  
+  .badge-item {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding-top: calc(var(--nav-height) + 20px);
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+}

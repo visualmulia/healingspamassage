@@ -1,0 +1,234 @@
+/* Healing Spa & Massage Bali - Premium Redesign Styling Foundation */
+
+:root {
+  /* Color Palette (Balinese Zen Luxury) */
+  --primary: #0F2D21; /* Deep Emerald Forest */
+  --primary-light: #1A3E31; /* Forest Mist */
+  --primary-dark: #071711; /* Midnight Emerald */
+  --accent: #C5A880; /* Warm Gold Sand */
+  --accent-hover: #D4BBA1; /* Soft Gold Light */
+  --accent-dark: #A98C64; /* Antique Bronze */
+  --bg-soft: #F6F3ED; /* Linen Cream */
+  --bg-white: #FCFBF9; /* Alabaster White */
+  --text-dark: #1E2321; /* Charcoal Slate */
+  --text-muted: #5B6360; /* Sage Grey */
+  --text-light: #DFE3E1; /* Soft Ice */
+  --white: #FFFFFF;
+  --success: #3E8E75; /* Healing Green */
+  
+  /* Typography */
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Layout Options */
+  --nav-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 4px 6px -1px rgba(15, 45, 33, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(15, 45, 33, 0.08), 0 4px 6px -2px rgba(15, 45, 33, 0.03);
+  --shadow-lg: 0 20px 25px -5px rgba(15, 45, 33, 0.1), 0 10px 10px -5px rgba(15, 45, 33, 0.04);
+  --glass-bg: rgba(252, 251, 249, 0.75);
+  --glass-border: rgba(197, 168, 128, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(15, 45, 33, 0.06);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-soft);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography Presets */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--primary);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+}
+
+.section-dark {
+  background-color: var(--primary);
+  color: var(--bg-soft);
+}
+
+.section-dark h2, .section-dark h3, .section-dark p {
+  color: var(--bg-white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  letter-spacing: 0.5px;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--bg-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(197, 168, 128, 0.35);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--bg-white);
+  border: 1.5px solid var(--accent);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphic Panel */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Section Header Utility */
+.section-header {
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.section-header .subtitle {
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-header .title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .section-header .title {
+    font-size: 2rem;
+  }
+}
